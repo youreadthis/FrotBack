@@ -1,8 +1,17 @@
 // Получаем модальное окно по id.
 const orderDialog = document.getElementById('order-dialog');
 
+// Получаем окно подробностей товара и его содержимое.
+const productDialog = document.getElementById('product-dialog');
+const productDialogTitle = document.getElementById('product-dialog-title');
+const productDialogDescription = document.getElementById('product-dialog-description');
+const productDialogImage = document.getElementById('product-dialog-image');
+const detailButtons = document.querySelectorAll('.product-card__details-button');
+const closeProductDialogButton = document.getElementById('close-product-dialog');
+const orderFromDetailsButton = document.getElementById('order-from-details');
+
 // Получаем все кнопки заказа в карточках товаров.
-const orderButtons = document.querySelectorAll('.product-card__button');
+const orderButtons = document.querySelectorAll('.product-card__order-button');
 
 // Получаем кнопку закрытия модального окна.
 const closeDialogButton = document.getElementById('close-order-dialog');
@@ -10,18 +19,41 @@ const closeDialogButton = document.getElementById('close-order-dialog');
 // Получаем скрытое поле, в которое будет записан выбранный товар.
 const selectedProductInput = document.getElementById('selected-product');
 
-// Перебираем все кнопки «Заказать».
+// Заполняем окно подробностей данными карточки.
+detailButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const productCard = button.closest('.product-card');
+
+    productDialogTitle.textContent = productCard.querySelector('.product-card__title').textContent;
+    productDialogDescription.textContent = productCard.querySelector('.product-card__description').textContent;
+    productDialogImage.alt = productDialogTitle.textContent;
+    productDialog.showModal();
+  });
+});
+
+// Открываем заказ для выбранного товара.
+function openOrderDialog(productName) {
+  selectedProductInput.value = productName;
+
+  if (productDialog.open) {
+    productDialog.close();
+  }
+
+  orderDialog.showModal();
+}
+
 orderButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    // Получаем название товара из data-атрибута.
-    const productName = button.dataset.product;
-
-    // Записываем название товара в скрытое поле формы.
-    selectedProductInput.value = productName;
-
-    // Открываем модальное окно.
-    orderDialog.showModal();
+    openOrderDialog(button.dataset.product);
   });
+});
+
+orderFromDetailsButton.addEventListener('click', () => {
+  openOrderDialog(productDialogTitle.textContent);
+});
+
+closeProductDialogButton.addEventListener('click', () => {
+  productDialog.close();
 });
 
 // Закрываем модальное окно по кнопке «Закрыть».
