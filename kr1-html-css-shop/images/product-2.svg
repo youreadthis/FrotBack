@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Иллюстрация товара 2</title>
+  <desc id="desc">Мятная упаковка с геометрическим объектом и розовыми акцентами.</desc>
+  <rect width="800" height="600" fill="#e4f1ec"/>
+  <path d="M0 466 154 368l153 86 177-170 316 193v123H0Z" fill="#c5dfd4"/>
+  <path d="M225 123h350v357H225z" fill="#277c70"/>
+  <path d="m225 123 174 99 176-99M399 222v258" fill="none" stroke="#f9f5e9" stroke-width="12"/>
+  <path d="M399 222 511 287v128l-112 65-112-65V287Z" fill="#e46f76"/>
+  <path d="m287 287 112 68 112-68m-112 68v125" fill="none" stroke="#fff2dc" stroke-linejoin="round" stroke-width="10"/>
+  <circle cx="140" cy="157" r="48" fill="#e46f76"/>
+  <circle cx="660" cy="125" r="23" fill="#f2bd55"/>
+  <path d="M83 298h74m-37-37v74M634 445h78m-39-39v78" stroke="#277c70" stroke-linecap="round" stroke-width="8"/>
+  <path d="M275 160h82m-82 23h48" stroke="#d5eee4" stroke-linecap="round" stroke-width="9"/>
+</svg>

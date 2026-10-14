@@ -13,6 +13,7 @@
   --color-success: #168a2f;
   --color-success-bg: #eefaf0;
   --color-white: #ffffff;
+  --color-viewed: #b115a9;
 
   /* Отступы */
   --space-xs: 4px;
@@ -216,7 +217,7 @@ a:focus-visible {
   flex-direction: column;
   gap: var(--space-sm);
   padding: var(--space-md);
-  border: 1px solid var(--color-border);
+  border: 3px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-bg);
 }
@@ -231,6 +232,11 @@ a:focus-visible {
 
 .product-card--discount {
   border-color: var(--color-danger);
+}
+
+.product-card.product-card--viewed,
+.product-card.product-card--viewed:hover {
+  border-color: var(--color-viewed);
 }
 
 .product-card__title {

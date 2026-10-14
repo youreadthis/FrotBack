@@ -9,6 +9,13 @@ const productDialogImage = document.getElementById('product-dialog-image');
 const detailButtons = document.querySelectorAll('.product-card__details-button');
 const closeProductDialogButton = document.getElementById('close-product-dialog');
 const orderFromDetailsButton = document.getElementById('order-from-details');
+const productPlaceholderImage = 'images/product-placeholder.svg';
+
+productDialogImage.addEventListener('error', () => {
+  if (productDialogImage.getAttribute('src') !== productPlaceholderImage) {
+    productDialogImage.src = productPlaceholderImage;
+  }
+});
 
 // Получаем все кнопки заказа в карточках товаров.
 const orderButtons = document.querySelectorAll('.product-card__order-button');
@@ -24,8 +31,10 @@ detailButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const productCard = button.closest('.product-card');
 
+    productCard.classList.add('product-card--viewed');
     productDialogTitle.textContent = productCard.querySelector('.product-card__title').textContent;
     productDialogDescription.textContent = productCard.querySelector('.product-card__description').textContent;
+    productDialogImage.src = productCard.dataset.image || productPlaceholderImage;
     productDialogImage.alt = productDialogTitle.textContent;
     productDialog.showModal();
   });
@@ -44,6 +53,9 @@ function openOrderDialog(productName) {
 
 orderButtons.forEach((button) => {
   button.addEventListener('click', () => {
+    const productCard = button.closest('.product-card');
+    productCard.classList.add('product-card--viewed');
+
     openOrderDialog(button.dataset.product);
   });
 });
