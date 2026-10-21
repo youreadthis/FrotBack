@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
-
-<header class="site-header">
+<body>
+<header class="site-header" id="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">DeliveryShop</a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
@@ -26,9 +26,15 @@
             <a class="site-nav__link" href="contacts.html">Контакты</a>
           </li>
           <li class="site-nav__item">
+            <a class="site-nav__link" href="reviews.html">Отзывы</a>
+          </li>
+          <li class="site-nav__item">
             <a class="site-nav__link" href="index.html#popular">
               Популярные товары
             </a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="account.html">Личный кабинет</a>
           </li>
         </ul>
       </nav>
@@ -60,43 +66,34 @@
       <h2>Популярные товары</h2>
 
       <div class="products-grid">
-        <article class="product-card product-card--featured">
-        <h3 class="product-card__title">Товар 1</h3>
+        <article class="product-card product-card--featured" data-image="images/product-1.svg">
+        <h3 class="product-card__title">Письмо</h3>
         <p class="product-card__description">Краткое описание учебного товара.</p>
         <p class="product-card__price">Цена: 1000 руб.</p>
-        <button
-          class="button button--primary product-card__button"
-          type="button"
-          data-product="Товар 1"
-        >
-          Заказать
-        </button>
+        <div class="product-card__actions">
+          <button class="button button--secondary product-card__details-button" type="button">Подробнее</button>
+          <button class="button button--primary button--outlined product-card__order-button" type="button" data-product="Письмо">Заказать</button>
+        </div>
       </article>
 
-        <article class="product-card product-card--featured">
-        <h3 class="product-card__title">Товар 2</h3>
+        <article class="product-card product-card--featured" data-image="images/product-2.svg">
+        <h3 class="product-card__title">Лёгкий груз</h3>
         <p class="product-card__description">Краткое описание учебного товара.</p>
         <p class="product-card__price">Цена: 1500 руб.</p>
-        <button
-          class="button button--primary product-card__button"
-          type="button"
-          data-product="Товар 2"
-        >
-          Заказать
-        </button>
+        <div class="product-card__actions">
+          <button class="button button--secondary product-card__details-button" type="button">Подробнее</button>
+          <button class="button button--primary button--outlined product-card__order-button" type="button" data-product="Лёгкий груз">Заказать</button>
+        </div>
       </article>
 
-        <article class="product-card product-card--featured">
-        <h3 class="product-card__title">Товар 3</h3>
+        <article class="product-card product-card--featured" data-image="images/product-3.svg">
+        <h3 class="product-card__title">Спец письмо</h3>
         <p class="product-card__description">Краткое описание учебного товара.</p>
         <p class="product-card__price">Цена: 2000 руб.</p>
-        <button
-          class="button button--primary product-card__button"
-          type="button"
-          data-product="Товар 3"
-        >
-          Заказать
-        </button>
+        <div class="product-card__actions">
+          <button class="button button--secondary product-card__details-button" type="button">Подробнее</button>
+          <button class="button button--primary button--outlined product-card__order-button" type="button" data-product="Спец письмо">Заказать</button>
+        </div>
       </article>
       </div>
     </section>
@@ -116,6 +113,24 @@
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
 
+  <a class="back-to-header" href="#site-header" aria-label="Вернуться к шапке сайта">
+    <span aria-hidden="true">↑</span>
+  </a>
+
+  <dialog class="product-dialog" id="product-dialog" aria-labelledby="product-dialog-title">
+    <div class="product-dialog__content">
+      <img class="product-dialog__image" id="product-dialog-image" src="images/product-placeholder.svg" alt="">
+      <div class="product-dialog__details">
+        <h2 class="product-dialog__title" id="product-dialog-title"></h2>
+        <p class="product-dialog__description" id="product-dialog-description"></p>
+        <div class="product-dialog__actions">
+          <button class="button button--secondary" type="button" id="close-product-dialog">Закрыть</button>
+          <button class="button button--primary button--outlined" type="button" id="order-from-details">Заказать</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
   <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
     <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
 
@@ -123,13 +138,13 @@
       <input id="selected-product" name="selected-product" type="hidden">
 
       <div class="order-form__field">
-        <label class="order-form__label" for="order-name">Имя</label>
+        <label class="order-form__label" for="order-name">ФИО</label>
         <input
           class="order-form__input"
           id="order-name"
           name="name"
           type="text"
-          placeholder="Введите ваше имя"
+          placeholder="Введите ваши ФИО"
           minlength="2"
           autocomplete="given-name"
           required
@@ -137,7 +152,7 @@
       </div>
 
       <div class="order-form__field">
-        <label class="order-form__label" for="order-email">E-mail</label>
+        <label class="order-form__label" for="order-email">Электронная почта</label>
         <input
           class="order-form__input"
           id="order-email"
@@ -212,7 +227,7 @@
         <button class="button button--secondary" type="button" id="close-order-dialog">
           Закрыть
         </button>
-        <button class="button button--primary" type="submit">
+        <button class="button button--primary button--outlined" type="submit">
           Отправить заявку
         </button>
       </div>

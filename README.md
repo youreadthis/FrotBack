@@ -8,15 +8,25 @@
 
 ## Структура проекта
 
-- `index.html` — главная страница;
-- `catalog.html` — каталог товаров;
-- `contacts.html` — контактная информация;
-- `css/style.css` — файл стилей;
-- `js/main.js` — файл JavaScript;
-- `images/` — папка для изображений;
-- `README.md` — описание проекта;
-- `.gitignore` — список файлов, исключённых из Git.
-- `sitemap.xml` — простая карта сайта;
+```text
+FrotBack/
+├── README.md
+├── .gitignore
+└── kr1-html-css-shop/
+	├── index.html                 # Главная страница и популярные товары
+	├── catalog.html               # Каталог, карточки товаров и оформление заказа
+	├── contacts.html              # Контактная информация
+	├── reviews.html               # Отзывы покупателей
+	├── account.html               # Личный кабинет с контактными данными
+	├── sitemap.xml                # Карта сайта
+	├── css/
+	│   └── style.css              # Стили сайта и Gruvbox Material-палитра
+	├── js/
+	│   ├── main.js                # Карточки товаров, модальные окна и проверка заказа
+	│   └── account.js             # Сохранение профиля в localStorage браузера
+	└── images/
+		└── .gitkeep
+```
 
 
 ## Используемые технологии

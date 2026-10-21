@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Почтовая коробка</title>
+  <desc id="desc">Картонная посылочная коробка с адресной этикеткой и почтовой маркировкой.</desc>
+  <rect width="800" height="600" fill="#282828"/>
+  <circle cx="625" cy="140" r="78" fill="#d8a657"/>
+  <path d="M0 455 800 365v235H0Z" fill="#32302f"/>
+  <path d="m195 220 205-100 205 100-205 110Z" fill="#ebdbb2"/>
+  <path d="M195 220v220l205 110V310Z" fill="#a89984"/>
+  <path d="M605 220v220L400 550V310Z" fill="#d8a657"/>
+  <path d="m302 168 203 111m-35-134L270 247" fill="none" stroke="#504945" stroke-width="13"/>
+  <path d="m400 310 69-38v89l-69 39z" fill="#ebdbb2"/>
+  <path d="M415 326h38m-38 15h29m-29 15h34" stroke="#504945" stroke-linecap="round" stroke-width="6"/>
+  <path d="M400 310v240" stroke="#504945" stroke-width="8"/>
+  <path d="M245 352v70m18-80v80m18-68v75m18-80v92" stroke="#282828" stroke-width="8"/>
+  <path d="M535 350h38m-19-19v38" stroke="#ea6962" stroke-linecap="round" stroke-width="8"/>
+  <path d="M90 170h46m-23-23v46M690 405h40m-20-20v40" stroke="#a9b665" stroke-linecap="round" stroke-width="7"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Иллюстрация товара 3</title>
+  <desc id="desc">Бордовая упаковка с жёлтым графическим знаком и полосатым фоном.</desc>
+  <rect width="800" height="600" fill="#f4e9e4"/>
+  <path d="M0 0h800v600H0z" fill="#f4e9e4"/>
+  <path d="M0 0h800v600H0z" fill="none" stroke="#e5cfc6" stroke-width="34" stroke-dasharray="2 46"/>
+  <path d="M216 111h368v381H216z" fill="#a83d4a"/>
+  <path d="m216 111 184 106 184-106M400 217v275" fill="none" stroke="#fff5e9" stroke-width="12"/>
+  <path d="M400 279 427 337l64 8-47 44 11 63-55-31-56 31 11-63-46-44 64-8Z" fill="#f4c04e"/>
+  <path d="M262 151h93m-93 22h55" stroke="#f5c7b9" stroke-linecap="round" stroke-width="9"/>
+  <circle cx="647" cy="165" r="53" fill="#f4c04e"/>
+  <path d="M647 132v66m-33-33h66" stroke="#a83d4a" stroke-linecap="round" stroke-width="10"/>
+  <path d="M89 400h66m-33-33v66M660 405h55m-27-27v55" stroke="#a83d4a" stroke-linecap="round" stroke-width="8"/>
+</svg>
