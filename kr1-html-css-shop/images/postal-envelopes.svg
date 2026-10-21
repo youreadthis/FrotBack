@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Набор почтовых конвертов</title>
+  <desc id="desc">Три конверта из плотной бумаги, сложенные веером на тёмном фоне.</desc>
+  <rect width="800" height="600" fill="#1d2021"/>
+  <path d="M0 430 800 330v270H0Z" fill="#282828"/>
+  <g transform="rotate(-10 360 290)">
+    <rect x="153" y="155" width="360" height="245" rx="8" fill="#a9b665"/>
+    <path d="m153 163 180 145 180-145" fill="none" stroke="#504945" stroke-width="10"/>
+  </g>
+  <g transform="rotate(8 460 300)">
+    <rect x="287" y="135" width="360" height="245" rx="8" fill="#ea6962"/>
+    <path d="m287 143 180 145 180-145" fill="none" stroke="#504945" stroke-width="10"/>
+  </g>
+  <g transform="rotate(-2 405 350)">
+    <rect x="218" y="260" width="390" height="255" rx="8" fill="#ebdbb2"/>
+    <path d="m218 270 195 155 195-155" fill="none" stroke="#a89984" stroke-width="11"/>
+    <path d="M273 462h95m-95 18h68" stroke="#d8a657" stroke-linecap="round" stroke-width="8"/>
+    <rect x="525" y="425" width="54" height="54" fill="#d8a657"/>
+    <path d="M535 435h34v34h-34z" fill="none" stroke="#504945" stroke-width="5"/>
+  </g>
+  <path d="M100 120h44m-22-22v44M680 130h36m-18-18v36" stroke="#d8a657" stroke-linecap="round" stroke-width="7"/>
+</svg>

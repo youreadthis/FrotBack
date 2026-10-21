@@ -6,11 +6,12 @@
   <meta name="description" content="Личный кабинет покупателя учебного интернет-магазина.">
   <title>Личный кабинет — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/account.js" defer></script>
 </head>
 <body>
   <header class="site-header" id="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">DeliveryShop</a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
@@ -33,14 +34,15 @@
 
     <section class="section">
       <h1>Личный кабинет</h1>
-      <div class="profile-fields" aria-label="Контактные данные">
+      <form class="profile-form" id="profile-form">
+        <div class="profile-fields" aria-label="Контактные данные">
         <label class="profile-field" for="profile-first-name">
           Имя
-          <input class="profile-field__input" id="profile-first-name" name="first-name" type="text" autocomplete="given-name">
+          <input class="profile-field__input" id="profile-first-name" name="first-name" type="text" autocomplete="given-name" required>
         </label>
         <label class="profile-field" for="profile-last-name">
           Фамилия
-          <input class="profile-field__input" id="profile-last-name" name="last-name" type="text" autocomplete="family-name">
+          <input class="profile-field__input" id="profile-last-name" name="last-name" type="text" autocomplete="family-name" required>
         </label>
         <label class="profile-field" for="profile-middle-name">
           Отчество
@@ -48,13 +50,16 @@
         </label>
         <label class="profile-field" for="profile-email">
           Электронная почта
-          <input class="profile-field__input" id="profile-email" name="email" type="email" autocomplete="email">
+          <input class="profile-field__input" id="profile-email" name="email" type="email" autocomplete="email" required placeholder="example@mail.ru">
         </label>
         <label class="profile-field" for="profile-phone">
           Контактный телефон
-          <input class="profile-field__input" id="profile-phone" name="phone" type="tel" autocomplete="tel">
+          <input class="profile-field__input" id="profile-phone" name="phone" type="tel" inputmode="tel" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" title="Формат: +7 (900) 000-00-00" autocomplete="tel" required placeholder="+7 (900) 000-00-00">
         </label>
-      </div>
+        </div>
+        <button class="button button--primary profile-form__submit" type="submit">Сохранить данные</button>
+        <p class="success-message profile-form__message" id="profile-save-message" role="status" hidden>Данные профиля сохранены.</p>
+      </form>
     </section>
   </main>
 

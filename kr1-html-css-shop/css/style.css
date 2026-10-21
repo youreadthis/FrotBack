@@ -478,6 +478,14 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
+.profile-form__submit {
+  margin-top: var(--space-md);
+}
+
+.profile-form__message {
+  margin-bottom: 0;
+}
+
 @media (max-width: 800px) {
   .products-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

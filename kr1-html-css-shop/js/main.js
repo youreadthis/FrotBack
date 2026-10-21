@@ -25,6 +25,42 @@ const closeDialogButton = document.getElementById('close-order-dialog');
 
 // Получаем скрытое поле, в которое будет записан выбранный товар.
 const selectedProductInput = document.getElementById('selected-product');
+const orderNameInput = document.getElementById('order-name');
+const orderEmailInput = document.getElementById('order-email');
+const orderPhoneInput = document.getElementById('order-phone');
+const profileStorageKey = 'shopProjectProfile';
+
+function loadSavedProfile() {
+  try {
+    return JSON.parse(localStorage.getItem(profileStorageKey) || 'null');
+  } catch {
+    return null;
+  }
+}
+
+function applySavedProfile() {
+  const profile = loadSavedProfile();
+
+  if (!profile) {
+    return;
+  }
+
+  orderNameInput.value = [profile.lastName, profile.firstName, profile.middleName]
+    .filter(Boolean)
+    .join(' ');
+  orderEmailInput.value = profile.email || '';
+  orderPhoneInput.value = profile.phone || '';
+}
+
+const phonePattern = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+
+orderPhoneInput.addEventListener('input', () => {
+  orderPhoneInput.setCustomValidity(
+    orderPhoneInput.value && !phonePattern.test(orderPhoneInput.value)
+      ? 'Введите телефон в формате +7 (900) 000-00-00.'
+      : ''
+  );
+});
 
 // Заполняем окно подробностей данными карточки.
 detailButtons.forEach((button) => {
@@ -43,6 +79,7 @@ detailButtons.forEach((button) => {
 // Открываем заказ для выбранного товара.
 function openOrderDialog(productName) {
   selectedProductInput.value = productName;
+  applySavedProfile();
 
   if (productDialog.open) {
     productDialog.close();

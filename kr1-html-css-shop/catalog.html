@@ -11,7 +11,7 @@
 <body>
   <header class="site-header" id="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">DeliveryShop</a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
@@ -101,7 +101,7 @@
         <div class="products-grid">
           <article class="product-card product-card--featured" data-image="images/product-1.svg">
             <h3 class="product-card__title">Письмо</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
+            <p class="product-card__description">Отправка письма</p>
             <p class="product-card__price">Цена: 1000 руб.</p>
             <div class="product-card__actions">
               <button class="button button--secondary product-card__details-button" type="button">Подробнее</button>
@@ -111,7 +111,7 @@
 
           <article class="product-card product-card--featured" data-image="images/product-2.svg">
             <h3 class="product-card__title">Лёгкий груз</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
+            <p class="product-card__description">Офромить доставку легковесного(до 2кг) груза</p>
             <p class="product-card__price">Цена: 1500 руб.</p>
             <div class="product-card__actions">
               <button class="button button--secondary product-card__details-button" type="button">Подробнее</button>
@@ -121,11 +121,41 @@
 
           <article class="product-card product-card--featured" data-image="images/product-3.svg">
             <h3 class="product-card__title">Спец письмо</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
+            <p class="product-card__description">Доставка письма за пределы странны</p>
             <p class="product-card__price">Цена: 2000 руб.</p>
             <div class="product-card__actions">
               <button class="button button--secondary product-card__details-button" type="button">Подробнее</button>
               <button class="button button--primary button--outlined product-card__order-button" type="button" data-product="Спец письмо">Заказать</button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured" data-image="images/postal-stamps.svg">
+            <h3 class="product-card__title">Набор почтовых марок</h3>
+            <p class="product-card__description">Коллекционный набор марок для писем и открыток.</p>
+            <p class="product-card__price">Цена: 350 руб.</p>
+            <div class="product-card__actions">
+              <button class="button button--secondary product-card__details-button" type="button">Подробнее</button>
+              <button class="button button--primary button--outlined product-card__order-button" type="button" data-product="Набор почтовых марок">Заказать</button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured" data-image="images/postal-envelopes.svg">
+            <h3 class="product-card__title">Набор конвертов</h3>
+            <p class="product-card__description">Пять плотных конвертов для писем и поздравительных открыток.</p>
+            <p class="product-card__price">Цена: 490 руб.</p>
+            <div class="product-card__actions">
+              <button class="button button--secondary product-card__details-button" type="button">Подробнее</button>
+              <button class="button button--primary button--outlined product-card__order-button" type="button" data-product="Набор конвертов">Заказать</button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured" data-image="images/postal-box.svg">
+            <h3 class="product-card__title">Почтовая коробка</h3>
+            <p class="product-card__description">Прочная коробка для аккуратной отправки небольших посылок.</p>
+            <p class="product-card__price">Цена: 790 руб.</p>
+            <div class="product-card__actions">
+              <button class="button button--secondary product-card__details-button" type="button">Подробнее</button>
+              <button class="button button--primary button--outlined product-card__order-button" type="button" data-product="Почтовая коробка">Заказать</button>
             </div>
           </article>
         </div>
@@ -163,8 +193,8 @@
       <input id="selected-product" name="selected-product" type="hidden">
 
       <div class="order-form__field">
-        <label class="order-form__label" for="order-name">Имя</label>
-        <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
+        <label class="order-form__label" for="order-name">ФИО</label>
+        <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Введите ваши ФИО" minlength="2" autocomplete="given-name" required>
       </div>
 
       <div class="order-form__field">

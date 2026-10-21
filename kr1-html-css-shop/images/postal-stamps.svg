@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Набор почтовых марок</title>
+  <desc id="desc">Лист почтовых марок с рисунками почтового голубя и конверта на тёплом фоне.</desc>
+  <rect width="800" height="600" fill="#282828"/>
+  <path d="M0 454 800 350v250H0Z" fill="#32302f"/>
+  <g transform="rotate(-7 400 300)">
+    <rect x="180" y="95" width="440" height="400" rx="8" fill="#d8a657"/>
+    <path d="M195 110h410v370H195z" fill="none" stroke="#1d2021" stroke-dasharray="2 13" stroke-linecap="round" stroke-width="8"/>
+    <rect x="220" y="135" width="165" height="145" fill="#ebdbb2"/>
+    <rect x="415" y="135" width="165" height="145" fill="#a9b665"/>
+    <rect x="220" y="310" width="165" height="145" fill="#ea6962"/>
+    <rect x="415" y="310" width="165" height="145" fill="#7daea3"/>
+    <path d="M254 235c14-49 69-53 97-22-26-5-41 8-52 28 19-7 37-4 52 8-31 25-73 20-97-14Z" fill="#504945"/>
+    <path d="m445 218 52-43 52 43v38H445z" fill="#504945"/>
+    <path d="m445 218 52 35 52-35" fill="none" stroke="#ebdbb2" stroke-width="7"/>
+    <circle cx="302" cy="382" r="43" fill="none" stroke="#504945" stroke-width="8"/>
+    <path d="M277 382h50m-25-25v50" stroke="#504945" stroke-width="7"/>
+    <path d="M455 350h85m-85 18h68m-68 18h78" stroke="#282828" stroke-linecap="round" stroke-width="8"/>
+  </g>
+  <circle cx="100" cy="135" r="7" fill="#d8a657"/>
+  <circle cx="690" cy="455" r="10" fill="#a9b665"/>
+</svg>
