@@ -8,7 +8,7 @@
   <script src="js/main.js" defer></script>
 </head>
 <body>
-<header class="site-header">
+<header class="site-header" id="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">ShopProject</a>
 
@@ -24,6 +24,9 @@
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="reviews.html">Отзывы</a>
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="index.html#popular">
@@ -106,6 +109,10 @@
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
+
+  <a class="back-to-header" href="#site-header" aria-label="Вернуться к шапке сайта">
+    <span aria-hidden="true">↑</span>
+  </a>
 
   <dialog class="product-dialog" id="product-dialog" aria-labelledby="product-dialog-title">
     <div class="product-dialog__content">

@@ -11,6 +11,7 @@
 - `index.html` — главная страница;
 - `catalog.html` — каталог товаров;
 - `contacts.html` — контактная информация;
+- `reviews.html` — отзывы покупателей;
 - `css/style.css` — файл стилей;
 - `js/main.js` — файл JavaScript;
 - `images/` — папка для изображений;
