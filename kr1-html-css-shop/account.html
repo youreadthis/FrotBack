@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Личный кабинет покупателя учебного интернет-магазина.">
+  <title>Личный кабинет — Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="reviews.html">Отзывы</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="account.html" aria-current="page">Личный кабинет</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Личный кабинет</span>
+    </nav>
+
+    <section class="section">
+      <h1>Личный кабинет</h1>
+      <div class="profile-fields" aria-label="Контактные данные">
+        <label class="profile-field" for="profile-first-name">
+          Имя
+          <input class="profile-field__input" id="profile-first-name" name="first-name" type="text" autocomplete="given-name">
+        </label>
+        <label class="profile-field" for="profile-last-name">
+          Фамилия
+          <input class="profile-field__input" id="profile-last-name" name="last-name" type="text" autocomplete="family-name">
+        </label>
+        <label class="profile-field" for="profile-middle-name">
+          Отчество
+          <input class="profile-field__input" id="profile-middle-name" name="middle-name" type="text" autocomplete="additional-name">
+        </label>
+        <label class="profile-field" for="profile-email">
+          Электронная почта
+          <input class="profile-field__input" id="profile-email" name="email" type="email" autocomplete="email">
+        </label>
+        <label class="profile-field" for="profile-phone">
+          Контактный телефон
+          <input class="profile-field__input" id="profile-phone" name="phone" type="tel" autocomplete="tel">
+        </label>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+
+  <a class="back-to-header" href="#site-header" aria-label="Вернуться к шапке сайта">
+    <span aria-hidden="true">↑</span>
+  </a>
+</body>
+</html>
