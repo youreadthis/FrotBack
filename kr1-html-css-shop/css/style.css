@@ -1,19 +1,19 @@
 /* 1. Переменные проекта */
 :root {
-  /* Основные цвета */
-  --color-bg: #ffffff;
-  --color-text: #222222;
-  --color-muted: #666666;
-  --color-primary: #0057b8;
-  --color-primary-dark: #003f86;
-  --color-border: #dddddd;
-  --color-surface: #f7f7f7;
-  --color-surface-accent: #eef5ff;
-  --color-danger: #b00020;
-  --color-success: #168a2f;
-  --color-success-bg: #eefaf0;
-  --color-white: #ffffff;
-  --color-viewed: #b115a9;
+  color-scheme: dark;
+  --color-bg: #1d2021;
+  --color-text: #ebdbb2;
+  --color-muted: #a89984;
+  --color-primary: #d8a657;
+  --color-primary-dark: #e3a84e;
+  --color-border: #504945;
+  --color-surface: #282828;
+  --color-surface-accent: #32302f;
+  --color-danger: #ea6962;
+  --color-success: #a9b665;
+  --color-success-bg: #323a2e;
+  --color-on-primary: #1d2021;
+  --color-viewed: #d3869b;
 
   /* Отступы */
   --space-xs: 4px;
@@ -67,7 +67,7 @@ footer {
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-sm) var(--space-md);
-  color: var(--color-white);
+  color: var(--color-on-primary);
   background-color: var(--color-primary);
   border-radius: var(--radius-sm);
   text-decoration: none;
@@ -75,7 +75,7 @@ footer {
 }
 
 .back-to-header:hover {
-  color: var(--color-white);
+  color: var(--color-on-primary);
   background-color: var(--color-primary-dark);
 }
 
@@ -123,7 +123,7 @@ a:focus-visible {
 }
 
 .button--primary {
-  color: var(--color-white);
+  color: var(--color-on-primary);
   background-color: var(--color-primary);
 }
 
@@ -142,7 +142,7 @@ a:focus-visible {
 }
 
 .button--secondary:hover {
-  color: var(--color-white);
+  color: var(--color-on-primary);
   background-color: var(--color-primary);
 }
 
@@ -195,7 +195,7 @@ a:focus-visible {
 
 .site-nav__link:hover,
 .site-nav__link--active {
-  color: var(--color-white);
+  color: var(--color-on-primary);
   background-color: var(--color-primary);
 }
 
@@ -342,6 +342,8 @@ a:focus-visible {
   padding: 0;
   border: none;
   border-radius: var(--radius-lg);
+  color: var(--color-text);
+  background-color: var(--color-surface);
 }
 
 .product-dialog::backdrop {
@@ -385,6 +387,8 @@ a:focus-visible {
   padding: var(--space-lg);
   border: none;
   border-radius: var(--radius-lg);
+  color: var(--color-text);
+  background-color: var(--color-surface);
 }
 
 .order-dialog::backdrop {
@@ -412,6 +416,8 @@ a:focus-visible {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   font: inherit;
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 .order-form__input:hover,
